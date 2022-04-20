@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BroadcastExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TxN-C4-im5">
+                                <rect key="frame" x="142" y="383" width="130" height="130"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSh-QW-kpE" customClass="RPSystemBroadcastPickerView">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ButtonIcon" translatesAutoresizingMaskIntoConstraints="NO" id="g5Q-BG-2jj">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LU5-7o-PbJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="LU5-7o-PbJ" secondAttribute="height" multiplier="1:1" id="FN1-Wd-YFI"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="startBroadcastClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KEH-UV-FBY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="g5Q-BG-2jj" secondAttribute="trailing" id="1Bg-9v-Msk"/>
+                                    <constraint firstAttribute="bottom" secondItem="fSh-QW-kpE" secondAttribute="bottom" id="1kC-jt-vg6"/>
+                                    <constraint firstAttribute="height" constant="130" id="JD2-kk-7Zu"/>
+                                    <constraint firstItem="g5Q-BG-2jj" firstAttribute="top" secondItem="TxN-C4-im5" secondAttribute="top" id="Mas-AP-6RZ"/>
+                                    <constraint firstItem="fSh-QW-kpE" firstAttribute="leading" secondItem="TxN-C4-im5" secondAttribute="leading" id="OqF-IO-jxj"/>
+                                    <constraint firstAttribute="trailing" secondItem="LU5-7o-PbJ" secondAttribute="trailing" id="bG1-Vn-7FF"/>
+                                    <constraint firstAttribute="bottom" secondItem="LU5-7o-PbJ" secondAttribute="bottom" id="dD6-Eg-44P"/>
+                                    <constraint firstAttribute="bottom" secondItem="g5Q-BG-2jj" secondAttribute="bottom" id="dL9-qF-smr"/>
+                                    <constraint firstItem="LU5-7o-PbJ" firstAttribute="leading" secondItem="TxN-C4-im5" secondAttribute="leading" id="e5A-aJ-EBV"/>
+                                    <constraint firstAttribute="trailing" secondItem="fSh-QW-kpE" secondAttribute="trailing" id="hE1-SQ-uR1"/>
+                                    <constraint firstAttribute="width" constant="130" id="jZy-hK-T8y"/>
+                                    <constraint firstItem="LU5-7o-PbJ" firstAttribute="top" secondItem="TxN-C4-im5" secondAttribute="top" id="pmm-Wr-Q8p"/>
+                                    <constraint firstItem="g5Q-BG-2jj" firstAttribute="leading" secondItem="TxN-C4-im5" secondAttribute="leading" id="qcH-6m-XAm"/>
+                                    <constraint firstItem="fSh-QW-kpE" firstAttribute="top" secondItem="TxN-C4-im5" secondAttribute="top" id="wwA-7d-qFz"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to start mirroring" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IhY-OP-E0f">
+                                <rect key="frame" x="127" y="529" width="160" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TxN-C4-im5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dq6-It-JGw"/>
+                            <constraint firstItem="IhY-OP-E0f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JDL-kk-ThY"/>
+                            <constraint firstItem="IhY-OP-E0f" firstAttribute="top" secondItem="TxN-C4-im5" secondAttribute="bottom" constant="16" id="SMn-8T-zwM"/>
+                            <constraint firstItem="TxN-C4-im5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kcd-id-GlU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="testBroadcastView" destination="fSh-QW-kpE" id="D1B-es-6UN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ButtonIcon" width="42" height="42"/>
+    </resources>
+</document>
